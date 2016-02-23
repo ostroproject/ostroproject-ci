@@ -1,0 +1,13 @@
+PURGE_PATTERN=.*/20[1-9][0-9]-[^/]+
+PURGE_DRY_RUN=0
+# lifetimes in days:
+PULL_REQUEST=28
+META_LAYER=28
+REL_BUILDS=190
+# limit number of build dirs under same PR:
+MAX_BUILDS_OF_SAME_PR=4
+# policy by areas
+PURGE_PRODUCTS=ostro-os ostro-os                    ostro-os            ostro-os-xt          ostro-os-xt
+PURGE_PATHS=ostro-os    meta-!(*_pull-requests)     *_pull-requests     ostro-os-xt_master   *_pull-requests
+PURGE_AGES=$REL_BUILDS  $META_LAYER                 $PULL_REQUEST       $REL_BUILDS          $PULL_REQUEST
+KEEP_LATEST=1           1                           0                   1                    0

@@ -1,0 +1,17 @@
+DISTRO_NAME=ostro-os
+DISTRO_SNAME=ostro
+STORE_BASE=/srv/ostro/ostro-os
+BB_CACHE_BASE=/srv/ostro/ostro-os/bb-cache
+MACHINES=beaglebone edison intel-corei7-64 intel-quark
+PUBLISH_SUBDIRS=images isafw licenses sdk sdk-data sources testsuite .stamps detailed-logs
+PUBLISH_SUBDIRS_W_MACHINES=images isafw sdk sdk-data testsuite .stamps detailed-logs
+CI_EXPORT=ci-export
+CI_COMBO_DIR=.ci-combo
+PRSERVER_FILE=prserv.sqlite3
+PRSERVER_LOG=prserv.log
+PRSERVER_LOGLEVEL=DEBUG
+PRSERVER_BASEPATH=/srv/ostro/ostro-os/bb-cache/pr_server
+TESTRESULTS_DIR=.ci-testresults
+GIT_MIRROR=/srv/git_mirror
+CI_WORKERS_CACHE=ci/workers-cache
+CI_TESTRESULTS_CACHE=ci-testresults-cache
